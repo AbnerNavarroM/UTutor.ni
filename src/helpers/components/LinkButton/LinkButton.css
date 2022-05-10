@@ -1,0 +1,7 @@
+.linkButton{
+    margin-left: 2.5%;
+}
+
+.linkButton :nth-child(1){
+    color: black;
+}

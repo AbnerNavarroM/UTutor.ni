@@ -1,0 +1,30 @@
+@media (max-width: 1920px) and (orientation: landscape) {
+  body * {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+// Override default variables before the import
+// you can open the bootstrap.scss module and check any available variables.
+$primary: #dcb5ff;
+$secondary: #d9f2ff;
+$success: #7854e4;
+$info: #a5bdfd;
+
+
+//custom color to be mapped
+$accent : #da6d25;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  // add any additional color below
+  accent: $accent,
+  // now bg-accent,btn-accent,etc.. can be called
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');

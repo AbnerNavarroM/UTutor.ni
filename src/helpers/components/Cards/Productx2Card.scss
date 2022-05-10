@@ -1,0 +1,84 @@
+$primary: #dcb5ff;
+$secondary: #d9f2ff;
+$success: #7854e4;
+$info: #a5bdfd;
+
+.CardLayout {
+    height: 50vh;
+    /* border: 1px solid  red; */
+    background-color: white;
+    border-radius: 2.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 12px;
+}
+
+.CardLayout:hover {
+    transform: scale(1.010);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    cursor: default;
+}
+
+.CardImages>.col {
+    padding: 0;
+}
+
+.CourseImg {
+    height: calc(45vh * 0.45);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 !important;
+}
+
+.CardInfo p {
+    text-align: center;
+    font-size: 0.8em;
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.CardInfo h5, .CardInfo h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: $success;
+}
+
+.MoreCourses:hover{
+    animation: none;
+    transition: 0.5s;
+}
+
+.FooterContainer {
+    position: sticky;
+    margin-bottom: 0;
+    height: 90px;
+    background: $primary;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    // border: 1px solid red;
+}
+
+.FooterContainer .col{
+    height: inherit;
+}
+
+.FooterContainer .col:nth-child(1), .FooterContainer .col:nth-child(2){
+    border-right: 1px solid rgb(205, 145, 249);
+}
+.FooterContent{
+    padding: 15px 0;
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    // border: 1px solid green;
+    width: 100%;
+}
+
+.FooterContent p{
+    font-size: 0.7em;
+}
+
+.FooterContent h3{
+    font-size: 1.1em;
+}

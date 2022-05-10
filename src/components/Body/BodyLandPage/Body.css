@@ -1,0 +1,44 @@
+.firstRow {
+    margin-top: 15vh;
+}
+
+.Titulo1LPxInfo, .MainImageLP {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.WallPaper{
+    margin-top: 15vh;
+    height: 85vh;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../../helpers//images/Ututor-ni-WallpaperOp35.png");
+}
+
+.PlanesxProductos h1{
+    text-align: center;
+    margin: 100px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 1920px) and (orientation: landscape) {
+    .MainImageLP, .Titulo1LPxInfo {
+        width: 750px;
+        height: 60vh;
+    }
+
+    .UtutorImg{
+        width: 300px;
+    }
+}
+
+/* @media (max-width: 1440px) and (orientation: landscape) {
+    .MainImageLP {
+        width: 800px;
+    }
+} */
