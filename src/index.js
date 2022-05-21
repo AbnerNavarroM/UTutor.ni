@@ -5,10 +5,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Popper from 'popper.js';
 import './index.scss';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

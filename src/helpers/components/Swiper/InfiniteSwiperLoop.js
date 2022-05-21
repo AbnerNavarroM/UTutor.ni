@@ -33,9 +33,9 @@ export default function InfiniteSwiperLoop(props) {
                 className="mySwiper"
             >
                 {props.images &&
-                    props.images.map(img => {
+                    props.images.map((img, index) => {
                         return (
-                            <SwiperSlide key={img.title}>
+                            <SwiperSlide key={img.title + '0' + (index + 1)}>
                                 <img src={img.imgSrc} alt={img.title} />
                             </SwiperSlide>
                         );

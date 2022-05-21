@@ -4,7 +4,7 @@ $success: #7854e4;
 $info: #a5bdfd;
 
 .CardLayout {
-    height: 50vh;
+    height: 55vh;
     /* border: 1px solid  red; */
     background-color: white;
     border-radius: 2.5%;
@@ -13,9 +13,8 @@ $info: #a5bdfd;
 }
 
 .CardLayout:hover {
-    transform: scale(1.010);
+    transform: scale(1.025);
     transition: 0.5s;
-    transition-delay: 0.5s;
     cursor: default;
 }
 
@@ -49,6 +48,13 @@ $info: #a5bdfd;
     transition: 0.5s;
 }
 
+.MoreCourses:hover .FlechaContinuar{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
 .FooterContainer {
     position: sticky;
     margin-bottom: 0;
@@ -81,4 +87,9 @@ $info: #a5bdfd;
 
 .FooterContent h3{
     font-size: 1.1em;
+}
+
+.FlechaContinuar{
+    width: 50%;
+    margin: 0 auto;
 }

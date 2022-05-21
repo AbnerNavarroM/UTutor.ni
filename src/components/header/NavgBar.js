@@ -6,58 +6,77 @@ export default function NavgBar() {
     const links = [
         {
             linkDescription: 'Inicio',
-            linkName: 'home',
+            linkName: '/',
             active: true
         },
         {
             linkDescription: 'Quiénes Somos',
-            linkName: 'who-we-are'
+            linkName: '/who-we-are'
         },
         {
             linkDescription: 'Contáctenos',
-            linkName: 'contact'
+            linkName: '/contact'
         },
     ]
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="/home"> <img src={UtutorLogo} width='125' height='50' /></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light"
+        >
+            <div className="container-fluid"
+                style={{ width: '90%', margin: '0 auto' }}
+            >
+                <div className="col col-lg-3"
+                    style={{ width: '10%', margin: '0 auto' }}
+                >
+                    <a className="navbar-brand" href="/"> <img src={UtutorLogo} width='125' height='50' /></a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div className="collapse navbar-collapse col col-lg-5" id="navbarSupportedContent">
+                    <ul className="navbar-nav"
+                        style={{ width: 'auto', margin: '0 auto' }}
+                    >
 
                         {
                             links.map(l => {
                                 return (
-                                    <li key={l.linkName} className="nav-item">
-                                        <a className={'nav-link ' + `${l.active && 'active'}`} aria-current="page" href={'/' + l.linkName}>{l.linkDescription}</a>
+                                    <li key={l.linkName} className="nav-item ">
+                                        <a className={'nav-link ' + `${l.active && 'active'}`} aria-current="page" href={l.linkName}>{l.linkDescription}</a>
                                     </li>
                                 );
                             })
                         }
                     </ul>
 
-                        <LinkButton
-                            size='big'
-                            disabled={false}
-                            hierarchy='success'
-                            // outline={true}
-                            description="Registrarse"
-                            id="signUpButton"
-                            linkRef="/sign-up"
-                        />
+                    <div className="col col-lg-4">
+                        <div className="row">
+                            <div className="col p-3">
+                                <LinkButton
+                                    size='big'
+                                    disabled={false}
+                                    hierarchy='success'
+                                    // outline={true}
+                                    description="Registrarse"
+                                    id="signUpButton"
+                                    linkRef="/signup"
+                                    width={100}
+                                />
+                            </div>
 
-                        <LinkButton
-                            size='big'
-                            disabled={false}
-                            hierarchy='secondary'
-                            // outline={true}
-                            description="Iniciar Sesión"
-                            id="logInButton"
-                            linkRef="/log-in"
-                        />
+                            <div className="col p-3">
+                                <LinkButton
+                                    size='big'
+                                    disabled={false}
+                                    hierarchy='secondary'
+                                    // outline={true}
+                                    description="Iniciar Sesión"
+                                    id="logInButton"
+                                    linkRef="/signin"
+                                    width={100}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

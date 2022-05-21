@@ -1,11 +1,11 @@
 import NavgBar from "./components/header/NavgBar";
-import Body from "./components/Body/BodyLandPage/Body";
+import BodyIndex from "./components/Body/BodyIndex";
 
 function App() {
   return (
     <div className="App">
         <NavgBar />     
-        <Body /> 
+        <BodyIndex /> 
     </div>
   );
 }

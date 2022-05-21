@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './LinkButton.css';
+import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 
 export default class LinkButton extends Component {
 
@@ -10,7 +11,7 @@ export default class LinkButton extends Component {
 
   render() {
     let { size, disabled } = this.props;
-    const { linkRef, outline, description, buttonName, hierarchy } = this.props;
+    const { linkRef, outline, description, buttonName, hierarchy, color, width, attachedClasses } = this.props;
 
     if (size === 'small') {
       size = 'btn-sm'
@@ -22,11 +23,12 @@ export default class LinkButton extends Component {
 
     return (
       <a
-        className={`linkButton btn ${size} btn-${outline ? 'outline-' : ''}${hierarchy} ${disabled ? 'disabled' : ''}`}
+        className={`linkButton ${attachedClasses} btn ${size} btn-${outline ? 'outline-' : ''}${hierarchy} ${disabled ? 'disabled' : ''}`}
         role="button"
         aria-disabled="true"
         id={buttonName}
         href ={linkRef}
+        style={{color: color, width: width + '%', margin: `10px ${(100 - width)/2}%`}}
       >
         {description}
       </a>
@@ -41,7 +43,9 @@ LinkButton.propTypes = {
   outline: PropTypes.bool,
   description: PropTypes.string,
   buttonName: PropTypes.string.isRequired,
-  hierarchy: PropTypes.string
+  hierarchy: PropTypes.string, 
+  color : PropTypes.string, 
+  width : PropTypes.number
 }
 
 LinkButton.defaultProps = {
@@ -49,5 +53,6 @@ LinkButton.defaultProps = {
   disabled: false,
   linkRef: '',
   outline: false,
-  buttonName: 'button'
+  buttonName: 'button',
+  width : 100
 }
