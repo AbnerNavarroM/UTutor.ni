@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './LinkButton.css';
-import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 
 export default class LinkButton extends Component {
 

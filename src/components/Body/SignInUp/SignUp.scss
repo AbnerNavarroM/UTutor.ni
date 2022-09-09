@@ -4,65 +4,109 @@ $secondary: #d9f2ff;
 $success: #7854e4;
 $info: #a5bdfd;
 
-.SignUpContainer{
-    padding: 0 !important;
+.SignUpContainer {
+    height: 100vh;
+    color: white;
 }
 
-.SignUpInWallPaper {
-    height: 90vh;
-    width: 100%;
-    padding: 10vh 0;
-    margin-top: 10vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: contain;
-    background-image: url("../../../helpers//images/SignUpInWallPaper.gif");
+.SignUpSideContainer {
+    background-color: $success;
+    height: 100vh;
+    position: relative;
 }
-
-// .imgSigUpIn {
-//     border: 1px solid yellow;
-//     height: 65vh;
-//     width: 100%;
-// }
-
-// .imgSigUpIn img {
-//     width: 60%;
-//     margin: 0 auto;
-// }
 
 .FormularioRegistroContainer {
+    margin-top: 120px;
     text-align: center;
-    height: 75vh;
-    background-color: $primarylight;
-    font-weight: bolder;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
 }
 
-.LogoUTutorRegistro img {
-    width: 75%;
+.FormularioRegistroContainer>.col {
+    margin-top: 100px; //not in phone view
+}
+
+.LogoContainer {
+    position: relative;
+}
+
+.LogoUTutorRegistroXl {
+    width: 400px;
+}
+
+.LogoUTutorRegistroSm {
+    width: 200px;
+}
+
+///VERTICAL CENTERING
+.v-h-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.h-center {
     margin: 0 auto;
 }
 
-.FormularioRegistroContainer h1 {
+.FormularioRegistroContainer .row,
+.FormularioRegistro>.col {
     margin: 10px 0;
 }
 
-.FormularioRegistro {
-    margin: 20px 0;
+.FormularioRegistro .col-lg-6>.col~.col {
+    margin: 2px 0;
 }
 
-.FormularioRegistro input{
+.FormularioRegistro input {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+.FormularioRegistro input:focus {
+    box-shadow: 0 0 1px rgba(81, 203, 238, 0.5);
+    border: 1px solid rgba(81, 203, 238, 0.5);
+}
+
+.FormularioRegistro input {
+    margin: 2px 0;
+    padding: 5px;
     width: 100%;
-    margin: 3px 0;
-    height: 50px;
-    background-color: #f4f7ff;
+    border-radius: 5px;
     border: none;
-    padding: 10px;
+    font-size: 16px !important;
 }
 
-.FormularioRegistro input::placeholder{
-    color: rgb(201, 200, 200);
+.FormularioRegistro input::placeholder {
+    font-size: 18px;
+}
+
+.FormularioRegistro input:focus {
+    outline: none;
+    box-shadow: 0px 5px 10px 0px rgba(0, 50, 255, 0.5);
+}
+
+.LinkIniciarSesion a {
+    text-decoration: underline;
+    color: $primarylight;
+}
+
+.LinkIniciarSesion p,  .LinkIniciarSesion p a{
+    font-size: 18px;
+}
+
+.termyCond p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.red {
+    color: orange;
 }

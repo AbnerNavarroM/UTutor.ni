@@ -26,5 +26,9 @@ $theme-colors: (
   // now bg-accent,btn-accent,etc.. can be called
 );
 
+.justLeft{
+  text-align: left !important;
+}
+
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
