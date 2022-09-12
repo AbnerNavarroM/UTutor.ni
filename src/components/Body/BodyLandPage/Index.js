@@ -76,49 +76,54 @@ export default class Index extends Component {
   render() {
     return (
       <div className='body container-fluid' onScroll={this.onScrollChange}>
-        <div className="row">
-          <h1 id='scroll_position'>Nuevo Row</h1>
-        </div>
-
         <div className="row firstRow">
-          <div className="col-lg-4 offset-lg-1">
+          <div className="col col-lg-4 offset-lg-1">
             <div className='Titulo1LPxInfo'>
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
-                  <div className="col">
-                    <img src={UtutorImage} alt="Ututor Logo" className='UtutorImg' />
-                    <h1>Pasa tu examen de admisión sin incovenientes</h1>
-                    <p>Servicio de tutoría de la mejor calidad para estudiantes decididos a entrar a la universidad.</p>
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="col ">
-                    <div className="col-p3">
-                      <LinkButton
-                        description="Registrate Ya"
-                        hierarchy="success"
-                        outline
-                        size="big"
-                        width={100}
-                      />
+                  {/* Section HomePage 1 Side Left */}
+                  <div className="col col-lg-12">
+                    <div className="row">
+                      <div className="col">
+                        <img src={UtutorImage} alt="Ututor Logo" className='UtutorImg' />
+                      </div>
+                      <div className="col">
+                        <h1>Pasa tu examen de admisión sin incovenientes</h1>
+                      </div>
+                      <div className="col">
+                        <p>Servicio de tutoría de la mejor calidad para estudiantes decididos a entrar a la universidad.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col ">
-                    <div className="col-p3">
-                      <LinkButton
-                        description="Conoce Más"
-                        hierarchy="secondary"
-                        size="big"
-                        width={100}
-                      />
+                    {/* Buttons Row 1 */}
+                    <div className="row">
+                      <div className="col ">
+                        <div className="col-p3">
+                          <LinkButton
+                            description="Registrate Ya"
+                            hierarchy="success"
+                            outline
+                            size="big"
+                            width={100}
+                          />
+                        </div>
+                      </div>
+                      <div className="col ">
+                        <div className="col-p3">
+                          <LinkButton
+                            description="Conoce Más"
+                            hierarchy="secondary"
+                            size="big"
+                            width={100}
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-4 offset-lg-1">
+          <div className="col col-lg-5 offset-lg-1">
             {/* <img className="MainImageLP" src={MainLandingPage} alt="Main Image LandPage" /> */}
             <InfiniteSwiperLoop images={FirstMarketingCarousel4LandPageImages} />
           </div>

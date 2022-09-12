@@ -1,4 +1,6 @@
-import MarketingImg1 from '../../images/MarketingImg1 - JoinUtutorNextSeason.png';
+import MarketingImg1 from '../../images/Online-Classroom.jpg';
+import MarketingImg2 from '../../images/Online-Classroom2.jpg';
+import MarketingImg3 from '../../images/Online-Classroom3.jpg';
 
 export const MarketingImages = [
     {
@@ -6,11 +8,11 @@ export const MarketingImages = [
         title: 'join UTutor.ni next season'
     },
     {
-        imgSrc : MarketingImg1, //
+        imgSrc : MarketingImg2, //
         title: 'join UTutor.ni next season' // This is just removable code, it was done for testing carousel functionality only.
     },
     {
-        imgSrc : MarketingImg1, //
+        imgSrc : MarketingImg3, //
         title: 'join UTutor.ni next season' // This is just removable code, it was done for testing carousel functionality only.
     }
 ];
